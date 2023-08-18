@@ -1,4 +1,8 @@
-import "../App.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function App() {
   return (
@@ -19,7 +23,7 @@ export default function App() {
                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li className="nav-item mx-3">
-                    <a className="nav-link" href="#">Features</a>
+                    <a className="nav-link" href="#imgs">Features</a>
                   </li>
                   <li className="nav-item mx-3">
                     <a className="nav-link" href="#offre">Offres</a>
@@ -37,7 +41,27 @@ export default function App() {
           <main>
             {/* Youssef Code */}
             <div className="imgae_slider" id="imgs">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={0}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
 
+                style={{ width: "80%", height: "500px" }}
+              >
+                <SwiperSlide style={{ width: "100%", height: "100%" }}>
+                  <img src="photo1.jpg" alt="" style={{ width: "100%" }} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="photo2.jpg" alt="" style={{ width: "100%" }} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="photo3.jpg" alt="" style={{ width: "100%" }} />
+                </SwiperSlide>
+                <SwiperSlide> <img src="photo1.jpg" alt="" style={{ width: "100%" }} />
+                </SwiperSlide>
+              </Swiper>
             </div>
             {/* pleace for the cards */}
             <div id="offre" className="Cards-Container d-flex flex-wrap gap-4 my-3 justify-content-center">
