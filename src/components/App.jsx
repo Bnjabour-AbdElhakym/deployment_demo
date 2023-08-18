@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -108,7 +108,6 @@ export default function App() {
                   <a href="#" className="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
-
             </div>
           </main>
         </header>
