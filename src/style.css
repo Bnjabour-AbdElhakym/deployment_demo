@@ -2,18 +2,18 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 @import url('https://fonts.cdnfonts.com/css/revamped');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   list-style: none;
 }
 
-.parent{
-background-color:#003366;
-height: 90px;
+.parent {
+  background-color: #003366;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ height: 90px;
   /* margin: 0px 20px; */
 }
 
-.link{
+.link {
   position: relative;
   display: flex;
   /* background-color: red; */
@@ -29,14 +29,16 @@ height: 90px;
   top: 5px;
 }
 
-li{
- margin: 25px;
+li {
+  margin: 25px;
 }
-.active{
 
- font-weight: bolder;
+.active {
+
+  font-weight: bolder;
 }
-a{
+
+a {
   position: relative;
   color: #ffffff;
   font-size: 15px;
@@ -47,7 +49,7 @@ a{
 
 }
 
-a::after{
+a::after {
   content: "";
   position: absolute;
   background-color: #FF9900;
@@ -63,27 +65,27 @@ a:hover {
   color: #a0a0a0;
 }
 
-a:hover:after{
+a:hover:after {
   width: 100%
 }
 
-.btn{
-background-color:#FF9900;
-color: #ffffff; 
-border: none;
-padding: 10px 10px;
-border-radius: 15px;
-cursor: pointer;
-margin-bottom: 10px;
+.btn {
+  background-color: #FF9900;
+  color: #ffffff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 
 .btn:hover {
   background-color: #fff;
-  color: #FF9900; 
+  color: #FF9900;
 }
 
-.line{
+.line {
   position: absolute;
   background-color: #FF9900;
   width: 100%;
@@ -91,25 +93,25 @@ margin-bottom: 10px;
   top: 80px;
 }
 
-.icons{
-  background-color:#003366;
-   
-    /* justify-content: center;
+.icons {
+  background-color: #003366;
+
+  /* justify-content: center;
     align-items: center; */
-    /* margin: 0px 20px; */
-    height: 39px;
+  /* margin: 0px 20px; */
+  height: 39px;
 }
 
-.parenticon{
+.parenticon {
   display: flex;
   margin-left: 10px;
 }
 
 .icons i {
   color: #FF9900;
-margin-left: 7px;
- margin-top: 7px; 
-  
+  margin-left: 7px;
+  margin-top: 7px;
+
 }
 
 .childicon {
@@ -117,51 +119,51 @@ margin-left: 7px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin-left:20px;
-  margin-top: 3px; 
+  margin-left: 20px;
+  margin-top: 3px;
 }
 
-.contact-icon{
+.contact-icon {
   display: flex;
   margin-left: 550px;
 }
 
-h6{
+h6 {
   color: #FF9900;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 10px 10px;
 }
 
 
-.contact-icon .childicon{
+.contact-icon .childicon {
   background-color: #ffffff;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin-left:20px;
-  margin-top: 3px; 
-} 
+  margin-left: 20px;
+  margin-top: 3px;
+}
 
-.parent h4{
+.parent h4 {
   position: relative;
-  font-family: revamped ;
+  font-family: revamped;
   color: #ffffff;
   margin-right: 155px;
   right: 30px;
 }
 
-span{
-  font-family: revamped ;
+.logo-text {
+  font-family: revamped;
   color: #FF9900;
   font-size: xx-large;
 }
 
 /* button animation */
 
-.min a{
+.min a {
   position: absolute;
   right: 5px;
-  transform: translate(-50% ,-50%);
+  transform: translate(-50%, -50%);
   color: #ffffff;
   overflow: hidden;
   padding: 10px 10px;
@@ -173,9 +175,9 @@ span{
   box-shadow: 0 20px 50px rgb(255 255 255 /5%);
 }
 
- .min a:before{
+.min a:before {
   position: absolute;
-  width:50% ;
+  width: 50%;
   top: 2px;
   left: 2px;
   bottom: 2px;
@@ -183,84 +185,88 @@ span{
   background-color: rgb(142 255 240 /10%);
 }
 
-.min  a span:nth-child(1){
+.min a span:nth-child(1) {
   position: absolute;
   width: 100%;
   height: 5px;
   top: 0;
   left: 0;
-  background: linear-gradient(to right,#362102 , #FF9900);
+  background: linear-gradient(to right, #362102, #FF9900);
   animation: animate1 2s linear infinite;
 }
 
-@keyframes animate1{
-  0%{
+@keyframes animate1 {
+  0% {
     transform: translateX(-100%);
   }
-  100%{
+
+  100% {
     transform: translateX(100%);
   }
 }
 
-.min a span:nth-child(2){
+.min a span:nth-child(2) {
   position: absolute;
   width: 5px;
   height: 100%;
   top: 0;
   right: 0;
-  background: linear-gradient(to bottom,#362102 , #FF9900);
+  background: linear-gradient(to bottom, #362102, #FF9900);
   animation: animate2 2s linear infinite;
   animation-delay: 1s;
 }
 
-@keyframes animate2{
-  0%{
+@keyframes animate2 {
+  0% {
     transform: translateY(-100%);
   }
-  100%{
+
+  100% {
     transform: translateY(100%);
   }
 }
 
-.min a span:nth-child(3){
+.min a span:nth-child(3) {
   position: absolute;
   width: 100%;
   height: 5px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to left,#362102 , #FF9900);
+  background: linear-gradient(to left, #362102, #FF9900);
   animation: animate3 2s linear infinite;
 
 }
 
-@keyframes animate3{
-  0%{
+@keyframes animate3 {
+  0% {
     transform: translateX(100%);
   }
-  100%{
+
+  100% {
     transform: translateX(-100%);
   }
 }
 
 
-.min a span:nth-child(4){
+.min a span:nth-child(4) {
   position: absolute;
   width: 5px;
   height: 100%;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to top,#362102 , #FF9900);
+  background: linear-gradient(to top, #362102, #FF9900);
   animation: animate4 2s linear infinite;
   animation-delay: 1s;
 
 
 }
 
-@keyframes animate4{
-  0%{
+@keyframes animate4 {
+  0% {
     transform: translateY(100%);
   }
-  100%{
+
+  100% {
     transform: translateY(-100%);
   }
 }
@@ -277,17 +283,17 @@ span{
 
 }
 
-.actual-text{
+.actual-text {
   color: #ffffff;
   font-size: 17px;
   margin-left: 4px;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* button styling */
 .button {
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
   --animation-color: #FF9900;
   --fs-size: 2px;
   letter-spacing: 1px;
@@ -298,26 +304,117 @@ span{
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
+
 /* this is the text, when you hover on button */
 .hover-text {
   position: absolute;
   box-sizing: border-box;
   content: attr(data-text);
   color: var(--animation-color);
-   font-size: 17px;
+  font-size: 17px;
   margin: 5px 4px;
   width: 0%;
   inset: 0;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-right: var(--border-right) solid var(--animation-color);
   overflow: hidden;
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
 }
+
 /* hover */
 .button:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
 }
 
+/* learn more btn css */
+#LrBtn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
 
+#LrBtn.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+#LrBtn.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+#LrBtn.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+#LrBtn.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+#LrBtn.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+#LrBtn.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#LrBtn:hover .circle {
+  width: 100%;
+}
+
+#LrBtn:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+#LrBtn:hover .button-text {
+  color: #fff;
+}
+
+/* end learn more btn css */
