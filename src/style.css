@@ -1,35 +1,323 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,700&family=Poppins:wght@600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.cdnfonts.com/css/revamped');
 
-nav>* {
-  font-family: "Playfair";
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-.swiper {
-  width: 80%;
-  height: auto;
-}
-
-.swiper-slide {
-  text-align: center;
-  width: 100%;
-  height: 500px;
-  background-color: green;
-  font-size: 18px;
+.parent{
+background-color:#003366;
+height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  /* margin: 0px 20px; */
 }
 
-.swiper-slide img {
-  display: block;
+.link{
+  position: relative;
+  display: flex;
+  /* background-color: red; */
+  right: 210px;
+  top: 5px;
+}
+
+li{
+ margin: 25px;
+}
+.active{
+
+ font-weight: bolder;
+}
+a{
+  position: relative;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bolder;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+
+}
+
+a::after{
+  content: "";
+  position: absolute;
+  background-color: #FF9900;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  /* color:#ffffff ; */
+  color: #a0a0a0;
+}
+
+a:hover:after{
+  width: 100%
+}
+
+.btn{
+background-color:#FF9900;
+color: #ffffff; 
+border: none;
+padding: 10px 10px;
+border-radius: 15px;
+cursor: pointer;
+margin-bottom: 10px;
+}
+
+
+.btn:hover {
+  background-color: #fff;
+  color: #FF9900; 
+}
+
+.line{
+  position: absolute;
+  background-color: #FF9900;
   width: 100%;
+  height: 7px;
+  top: 80px;
+}
+
+.icons{
+  background-color:#003366;
+   
+    /* justify-content: center;
+    align-items: center; */
+    /* margin: 0px 20px; */
+    height: 39px;
+}
+
+.parenticon{
+  display: flex;
+  margin-left: 10px;
+}
+
+.icons i {
+  color: #FF9900;
+margin-left: 7px;
+ margin-top: 7px; 
+  
+}
+
+.childicon {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left:20px;
+  margin-top: 3px; 
+}
+
+.contact-icon{
+  display: flex;
+  margin-left: 550px;
+}
+
+h6{
+  color: #FF9900;
+  font-family: 'Poppins',sans-serif;
+  margin: 10px 10px;
+}
+
+
+.contact-icon .childicon{
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left:20px;
+  margin-top: 3px; 
+} 
+
+.parent h4{
+  position: relative;
+  font-family: revamped ;
+  color: #ffffff;
+  margin-right: 155px;
+  right: 30px;
+}
+
+span{
+  font-family: revamped ;
+  color: #FF9900;
+  font-size: xx-large;
+}
+
+/* button animation */
+
+.min a{
+  position: absolute;
+  right: 5px;
+  transform: translate(-50% ,-50%);
+  color: #ffffff;
+  overflow: hidden;
+  padding: 10px 10px;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 20px 50px rgb(255 255 255 /5%);
+}
+
+ .min a:before{
+  position: absolute;
+  width:50% ;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  content: '';
+  background-color: rgb(142 255 240 /10%);
+}
+
+.min  a span:nth-child(1){
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right,#362102 , #FF9900);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+.min a span:nth-child(2){
+  position: absolute;
+  width: 5px;
   height: 100%;
-  background-position: center;
-  background-size: cover;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to bottom,#362102 , #FF9900);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
 }
 
-.swiperpar {
-  width: 100%;
-  height: 500px;
-  margin: 100px 0px;
+@keyframes animate2{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
 }
+
+.min a span:nth-child(3){
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left,#362102 , #FF9900);
+  animation: animate3 2s linear infinite;
+
+}
+
+@keyframes animate3{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+
+.min a span:nth-child(4){
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top,#362102 , #FF9900);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+
+
+}
+
+@keyframes animate4{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+/* contact animate */
+
+/* === removing default button style ===*/
+.button {
+
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+
+}
+
+.actual-text{
+  color: #ffffff;
+  font-size: 17px;
+  margin-left: 4px;
+  font-family: 'Poppins',sans-serif;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #FF9900;
+  --fs-size: 2px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  position: relative;
+
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+   font-size: 17px;
+  margin: 5px 4px;
+  width: 0%;
+  inset: 0;
+  font-family: 'Poppins',sans-serif;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+

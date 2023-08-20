@@ -1,15 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import '../style.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import { delay } from "q";
 
 export default function App() {
   return (
     <div>
-      <div className="container-fluid lg-container">
+      
         <header>
-          <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        {/* <nav className="navbar navbar-expand-lg bg-white">
             <div className="container-fluid">
               <a className="navbar-brand lg-justify-content-evenly" href="#">
                 <img src="logo.svg" style={{ width: "4.5rem" }} alt="" />
@@ -20,46 +23,133 @@ export default function App() {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mx-auto fs-5">
                   <li className="nav-item mx-3">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    <a className="nav-link active" aria-current="page"  href="#">Home</a>
                   </li>
                   <li className="nav-item mx-3">
-                    <a className="nav-link" href="#imgs">Features</a>
+                    <a className="nav-link" id="link" href="#imgs" style={{color:"#2696d4" }}>Features</a>
                   </li>
                   <li className="nav-item mx-3">
-                    <a className="nav-link" href="#offre">Offres</a>
+                    <a className="nav-link" href="#offre" style={{color:"#2696d4"}}>Offres</a>
                   </li>
                   <li className="nav-item mx-3">
-                    <a className="nav-link" href="#">Features</a>
+                    <a className="nav-link" href="#" style={{color:"#2696d4"}}>Features</a>
                   </li>
                 </ul>
               </div>
               <div>
-                <button className="btn btn-success">Inscription</button>
+                <button className="btn btn-success" style={{background:" #0693e3"}}>Inscription</button>
               </div>
             </div>
-          </nav>
+          </nav> */}
+
+          {/* nv nAV */}
+          <div className="parent">
+
+<div className="logo">
+    <img src="logo.svg" width="80px"/>
+</div>
+  <h4> <span>ARTI</span> WEb SCHOOL</h4>
+
+<ul className="link">
+    <li><a href="" className="active">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+<div className="line"></div>
+
+<div className="min">
+    {/* <button className="btn">Inscription</button> */}
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span> 
+      Inscription
+    </a>
+    
+</div>
+</div>
+
+<div className="icons">
+
+  <div className="parenticon">
+
+  <div className="childicon">
+  <i class="fa-brands fa-facebook"></i>
+  </div>
+  <div className="childicon">
+  <i class="fa-brands fa-youtube"></i>
+  </div>
+  
+  <div className="childicon">
+  <i class="fa-brands fa-square-whatsapp"></i>
+  </div>
+
+  <div className="childicon">
+  <i class="fa-brands fa-square-instagram"></i>
+  </div>
+
+  <div className="contact-icon">
+
+  <div className="childicon">
+  <i class="fa-solid fa-phone"></i>
+  </div>
+
+    <button data-text="Awesome" class="button">
+    <span class="actual-text">&nbsp;0672907661&nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
+</button>
+
+
+
+  <div className="childicon">
+  <i class="fa-solid fa-envelope"></i>
+  </div>
+
+
+
+ <button data-text="Awesome" class="button">
+    <span class="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
+</button>
+
+
+  </div>
+  
+
+    </div>
+</div>
+
+          {/* end nvNAv */}
+      <div className="container lg-container">
           <main>
             {/* Youssef Code */}
             <div className="imgae_slider" id="imgs">
               <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Pagination,Autoplay]}
                 spaceBetween={0}
                 slidesPerView={1}
-                navigation
+             
+                autoplay={{delay:2000}}
                 pagination={{ clickable: true }}
+                
 
-                style={{ width: "80%", height: "500px" }}
+                style={{ width: "auto", height: "600px" ,margin:"10px 10px" }}
               >
-                <SwiperSlide style={{ width: "100%", height: "100%" }}>
-                  <img src="photo1.jpg" alt="" style={{ width: "100%" }} />
+                <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                  <img src="photo1.jpg" alt="" style={{ width: "100%" , height: "100%" }} />
                 </SwiperSlide>
-                <SwiperSlide>
-                  <img src="photo2.jpg" alt="" style={{ width: "100%" }} />
+                <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                  <img src="photo2.jpg" alt="" style={{ width: "100%" , height: "100%" }} />
                 </SwiperSlide>
-                <SwiperSlide>
-                  <img src="photo3.jpg" alt="" style={{ width: "100%" }} />
+                <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                  <img src="photo3.jpg" alt="" style={{ width: "100%" , height: "100%" }} />
                 </SwiperSlide>
-                <SwiperSlide> <img src="photo1.jpg" alt="" style={{ width: "100%" }} />
+                <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                   <img src="photo4.jpg" alt="" style={{ width: "100%" , height: "100%" }}  />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -110,8 +200,8 @@ export default function App() {
               </div>
             </div>
           </main>
-        </header>
       </div>
+        </header>
     </div>
   );
 }
