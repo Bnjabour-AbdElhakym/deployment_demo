@@ -7,8 +7,31 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { delay } from "q";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
+
+
+
+
+
 
 export default function App() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_9ji33ga', 'template_1ci9tdm', form.current, 'UEpaXmQJwpbBaVu4z')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    }
+  
   return (
     <div>
 
@@ -188,7 +211,7 @@ export default function App() {
         {/* Contact section */}
         <h1 align="center" className="mb-2">Contact Section</h1>
         <div className="container d-flex justify-content-center gap-4 my-3">
-          <form action="#" method="post" className="w-50 card p-3 h-50">
+          <form action="#" method="post" className="w-50 card p-3 h-50" ref={form} onSubmit={sendEmail}>
             <div class="mb-3">
               <label for="full_name" class="form-label">Name</label>
               <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
@@ -203,6 +226,8 @@ export default function App() {
               <label for="msg" class="form-label">Your Massage</label>
               <textarea class="form-control" name="msg" id="msg" rows="3"></textarea>
             </div>
+
+            <button class="btn btn-danger w-25 justify-content-end" type="submit">Send</button>
           </form>
 
           <div className="map-form">
