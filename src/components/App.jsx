@@ -56,13 +56,52 @@ export default function App() {
 
           <div className="min">
             {/* <button className="btn">Inscription</button> */}
-            <a href="#">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <span></span>
               <span></span>
               <span></span>
               <span></span>
               Inscription
             </a>
+
+            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">Inscription</h1>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <form action="#" method="post">
+                      <div class="mb-3">
+                        <label for="f_name" class="form-label">Full Name</label>
+                        <input type="email" class="form-control" name="f_name" id="f_name" placeholder="Full Name" />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="example@email.com" />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="phone_number" class="form-label">Phone Number</label>
+                        <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="+2126 110 008 21" />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="bearth" class="form-label">Your Bearthday</label>
+                        <input type="date" class="form-control" name="bearth" id="bearth" placeholder="Your Bearthday" />
+                      </div>
+
+                    </form>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" className="btn">Envoyer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
 
