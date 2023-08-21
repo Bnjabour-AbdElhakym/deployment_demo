@@ -73,29 +73,29 @@ export default function App() {
               <i className="fa-brands fa-facebook"></i>
             </div>
             <div className="childicon">
-              <i class="fa-brands fa-youtube"></i>
+              <i className="fa-brands fa-youtube"></i>
             </div>
 
             <div className="childicon">
-              <i class="fa-brands fa-square-whatsapp"></i>
+              <i className="fa-brands fa-square-whatsapp"></i>
             </div>
 
             <div className="childicon">
-              <i class="fa-brands fa-square-instagram"></i>
+              <i className="fa-brands fa-square-instagram"></i>
             </div>
 
             <div className="contact-icon">
               <div className="childicon">
-                <i class="fa-solid fa-phone"></i>
+                <i className="fa-solid fa-phone"></i>
               </div>
 
-              <button data-text="Awesome" class="button">
-                <span class="actual-text">&nbsp;0672907661&nbsp;</span>
-                <span class="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
+              <button data-text="Awesome" className="button">
+                <span className="actual-text">&nbsp;0672907661&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
               </button>
 
               <div className="childicon">
-                <i class="fa-solid fa-envelope"></i>
+                <i className="fa-solid fa-envelope"></i>
               </div>
 
               <button data-text="Awesome" class="button">
@@ -217,14 +217,14 @@ export default function App() {
               <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
             </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Name</label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="email.example@mail.com" />
+            <div className="mb-3">
+              <label for="email" className="form-label">Email</label>
+              <input type="email" className="form-control" name="email" id="email" placeholder="email.example@mail.com" />
             </div>
 
-            <div class="mb-3">
-              <label for="msg" class="form-label">Your Massage</label>
-              <textarea class="form-control" name="msg" id="msg" rows="3"></textarea>
+            <div className="mb-3">
+              <label for="msg" className="form-label">Your Massage</label>
+              <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
             </div>
 
             <button class="btn btn-danger w-25 justify-content-end" type="submit">Send</button>

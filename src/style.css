@@ -105,12 +105,12 @@ a:hover:after {
 .parenticon {
   display: flex;
   margin-left: 10px;
-  
+
 }
 
 svg {
   color: #FF9900;
- 
+
   margin-left: 7px;
   margin-top: 7px;
 }
