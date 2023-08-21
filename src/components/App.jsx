@@ -12,35 +12,6 @@ export default function App() {
     <div>
       
         <header>
-        {/* <nav className="navbar navbar-expand-lg bg-white">
-            <div className="container-fluid">
-              <a className="navbar-brand lg-justify-content-evenly" href="#">
-                <img src="logo.svg" style={{ width: "4.5rem" }} alt="" />
-              </a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav mx-auto fs-5">
-                  <li className="nav-item mx-3">
-                    <a className="nav-link active" aria-current="page"  href="#">Home</a>
-                  </li>
-                  <li className="nav-item mx-3">
-                    <a className="nav-link" id="link" href="#imgs" style={{color:"#2696d4" }}>Features</a>
-                  </li>
-                  <li className="nav-item mx-3">
-                    <a className="nav-link" href="#offre" style={{color:"#2696d4"}}>Offres</a>
-                  </li>
-                  <li className="nav-item mx-3">
-                    <a className="nav-link" href="#" style={{color:"#2696d4"}}>Features</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <button className="btn btn-success" style={{background:" #0693e3"}}>Inscription</button>
-              </div>
-            </div>
-          </nav> */}
 
           {/* nv nAV */}
           <div className="parent">
@@ -205,3 +176,6 @@ export default function App() {
     </div>
   );
 }
+
+
+
