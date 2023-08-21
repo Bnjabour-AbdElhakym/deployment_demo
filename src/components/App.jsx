@@ -26,12 +26,12 @@ export default function App() {
 
     emailjs.sendForm('service_9ji33ga', 'template_1ci9tdm', form.current, 'UEpaXmQJwpbBaVu4z')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
-    }
-  
+  }
+
   return (
     <div>
 
@@ -65,6 +65,7 @@ export default function App() {
             </a>
 
           </div>
+
         </div>
 
         <div className="icons">
@@ -98,7 +99,7 @@ export default function App() {
                 <i className="fa-solid fa-envelope"></i>
               </div>
 
-              <button data-text="Awesome" class="button">
+              <button data-text="Awesome" className="button">
                 <span className="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
                 <span className="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
               </button>
@@ -212,9 +213,9 @@ export default function App() {
         <h1 align="center" className="mb-2">Contact Section</h1>
         <div className="container d-flex justify-content-center gap-4 my-3">
           <form action="#" method="post" className="w-50 card p-3 h-50" ref={form} onSubmit={sendEmail}>
-            <div class="mb-3">
-              <label for="full_name" class="form-label">Name</label>
-              <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
+            <div className="mb-3">
+              <label for="full_name" className="form-label">Name</label>
+              <input type="text" className="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
             </div>
 
             <div className="mb-3">
@@ -227,7 +228,7 @@ export default function App() {
               <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
             </div>
 
-            <button class="btn btn-danger w-25 justify-content-end" type="submit">Send</button>
+            <button className="btn btn-danger w-25 justify-content-end" type="submit">Send</button>
           </form>
 
           <div className="map-form">
