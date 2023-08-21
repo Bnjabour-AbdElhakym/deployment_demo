@@ -75,7 +75,7 @@ export default function App() {
                 <i className="fa-solid fa-envelope"></i>
               </div>
 
-              <button data-text="Awesome" className="button">
+              <button data-text="Awesome" class="button">
                 <span className="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
                 <span className="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
               </button>
@@ -214,3 +214,6 @@ export default function App() {
     </div >
   );
 }
+
+
+
