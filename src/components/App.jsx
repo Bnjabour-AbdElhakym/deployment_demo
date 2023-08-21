@@ -211,6 +211,69 @@ export default function App() {
         </div>
         {/* end Contact section */}
       </main >
+
+      <footer className="bg-dark text-light p-4 d-lg-flex d-md-flex justify-content-evenly gap-3 align-items-center d-sm-block">
+        <div className="text-center lg-25 sm-100 p-3" style={{ minWidth: "33%" }}>
+          <div className="logo d-flex">
+            <img src="logo.svg" width="80px" />
+            <h4 className="mt-3"> <span className="logo-text">ARTI</span> WEb SCHOOL</h4>
+          </div>
+
+          <div>
+            <ul className="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <small className="opacity-50">Copyriht ©️ {new Date().getFullYear().toString()} Arti All the rights reserved </small>
+        </div>
+
+        <div className=" lg-25 sm-100 p-3" style={{ minWidth: "33%" }}>
+          <div className="mb-3">
+            <i className="fa fa-location-dot"></i>
+            <span className="ms-3">Avenue Mohammed es Slaoui, Fes</span>
+          </div>
+          <div className="mb-3">
+            <i className="fa fa-phone"></i>
+            <span className="ms-3">+212 60000 1122</span>
+          </div>
+          <div className="mb-3">
+            <i className="fa fa-envelope"></i>
+            <span className="ms-3">contact@artiweb.ma</span>
+          </div>
+          <div className="mb-3">
+            <i className="fa-solid fa-globe"></i>
+            <a href="http://www.artiweb.ma" target="_blank" className="ms-3" rel="noreferrer">www.artiweb.ma</a>
+          </div>
+        </div>
+
+        <div className="text-center lg-25 sm-100 p-3" style={{ minWidth: "33%" }}>
+          <h4>Company informations</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quam dolorem? Repudiandae distinctio quod nemo delectus placeat enim molestiae animi.
+          </p>
+          <div className="d-flex justify-content-center">
+            <div className="childicon">
+              <i className="fa-brands fa-facebook me-2"></i>
+            </div>
+            <div className="childicon">
+              <i className="fa-brands fa-youtube me-2"></i>
+            </div>
+
+            <div className="childicon">
+              <i className="fa-brands fa-square-whatsapp me-2"></i>
+            </div>
+
+            <div className="childicon">
+              <i className="fa-brands fa-square-instagram me-2"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     </div >
   );
 }

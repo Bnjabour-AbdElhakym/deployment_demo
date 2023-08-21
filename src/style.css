@@ -419,3 +419,19 @@ h6 {
 }
 
 /* end learn more btn css */
+
+/* footer styling */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+
+}
+
+.footer-links li {
+  margin-inline: 1px;
+}
+
+.footer-links li a {
+  font-size: 0.7rem;
+}
