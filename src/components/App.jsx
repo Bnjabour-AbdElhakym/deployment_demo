@@ -47,37 +47,37 @@ export default function App() {
         <div className="icons">
           <div className="parenticon">
             <div className="childicon">
-              <i class="fa-brands fa-facebook"></i>
+              <i className="fa-brands fa-facebook"></i>
             </div>
             <div className="childicon">
-              <i class="fa-brands fa-youtube"></i>
-            </div>
-
-            <div className="childicon">
-              <i class="fa-brands fa-square-whatsapp"></i>
+              <i className="fa-brands fa-youtube"></i>
             </div>
 
             <div className="childicon">
-              <i class="fa-brands fa-square-instagram"></i>
+              <i className="fa-brands fa-square-whatsapp"></i>
+            </div>
+
+            <div className="childicon">
+              <i className="fa-brands fa-square-instagram"></i>
             </div>
 
             <div className="contact-icon">
               <div className="childicon">
-                <i class="fa-solid fa-phone"></i>
+                <i className="fa-solid fa-phone"></i>
               </div>
 
-              <button data-text="Awesome" class="button">
-                <span class="actual-text">&nbsp;0672907661&nbsp;</span>
-                <span class="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
+              <button data-text="Awesome" className="button">
+                <span className="actual-text">&nbsp;0672907661&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
               </button>
 
               <div className="childicon">
-                <i class="fa-solid fa-envelope"></i>
+                <i className="fa-solid fa-envelope"></i>
               </div>
 
-              <button data-text="Awesome" class="button">
-                <span class="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
-                <span class="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
+              <button data-text="Awesome" className="button">
+                <span className="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
               </button>
             </div>
           </div>
@@ -116,11 +116,11 @@ export default function App() {
               <p className="mt-4" style={{ lineHeight: "2rem" }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deserunt esse eos, vero cumque, praesentium ea accusamus corporis doloremque accusantium enim. Beatae ea iure fugiat ex placeat et laboriosam animi possimus magnam voluptates dolorum eos commodi, labore sunt! Cupiditate ex eaque nulla odio dignissimos ad soluta optio illum quae libero!
               </p>
-              <button class="learn-more" id="LrBtn">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
+              <button className="learn-more" id="LrBtn">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
                 </span>
-                <span class="button-text">Learn More</span>
+                <span className="button-text">Learn More</span>
               </button>
             </div>
             <div className="img">
@@ -140,11 +140,11 @@ export default function App() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
               </p>
 
-              <button class="learn-more" id="LrBtn">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
+              <button className="learn-more" id="LrBtn">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
                 </span>
-                <span class="button-text">Learn More</span>
+                <span className="button-text">Learn More</span>
               </button>
             </div>
           </div>
@@ -157,11 +157,11 @@ export default function App() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
               </p>
 
-              <button class="learn-more" id="LrBtn">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
+              <button className="learn-more" id="LrBtn">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
                 </span>
-                <span class="button-text">Learn More</span>
+                <span className="button-text">Learn More</span>
               </button>
             </div>
           </div>
@@ -174,11 +174,11 @@ export default function App() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
               </p>
 
-              <button class="learn-more" id="LrBtn">
-                <span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
+              <button className="learn-more" id="LrBtn">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon arrow"></span>
                 </span>
-                <span class="button-text">Learn More</span>
+                <span className="button-text">Learn More</span>
               </button>
             </div>
           </div>
@@ -189,19 +189,19 @@ export default function App() {
         <h1 align="center" className="mb-2">Contact Section</h1>
         <div className="container d-flex justify-content-center gap-4 my-3">
           <form action="#" method="post" className="w-50 card p-3 h-50">
-            <div class="mb-3">
-              <label for="full_name" class="form-label">Name</label>
-              <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
+            <div className="mb-3">
+              <label for="full_name" className="form-label">Name</label>
+              <input type="text" className="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
             </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Name</label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="email.example@mail.com" />
+            <div className="mb-3">
+              <label for="email" className="form-label">Name</label>
+              <input type="email" className="form-control" name="email" id="email" placeholder="email.example@mail.com" />
             </div>
 
-            <div class="mb-3">
-              <label for="msg" class="form-label">Your Massage</label>
-              <textarea class="form-control" name="msg" id="msg" rows="3"></textarea>
+            <div className="mb-3">
+              <label for="msg" className="form-label">Your Massage</label>
+              <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
             </div>
           </form>
 
