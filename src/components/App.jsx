@@ -11,12 +11,6 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 
-
-
-
-
-
-
 export default function App() {
 
   const form = useRef();
@@ -36,13 +30,53 @@ export default function App() {
     <div>
 
       <header>
+
+      <div className="icons">
+          <div className="parenticon">
+            <div className="childicon">
+             <img src="imgs/facebook.svg" alt="" width={"20"} style={{ margin:"4px 4px" }} />
+            </div>
+            <div className="childicon">
+              <img src="imgs/instagram.svg" width={"18"} alt="" style={{ margin:"6px 6px" }}  />
+            </div>
+
+            <div className="childicon">
+              <img src="imgs/whatsapp.svg" width={"18"} alt="" style={{ margin:"6px 6px" }} />
+            </div>
+
+            <div className="contact-icon">
+              <div className="childicon">
+                <i className="fa-solid fa-phone"></i>
+              </div>
+
+              <button data-text="Awesome" className="button">
+                <span className="actual-text">&nbsp;0672907661&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
+              </button>
+
+              <div className="childicon">
+                <i className="fa-solid fa-envelope"></i>
+              </div>
+
+              <button data-text="Awesome" className="button">
+                <span className="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <div className="line"></div>
+
         {/* nv nAV */}
         <div className="parent">
 
           <div className="logo">
-            <img src="logo.svg" width="80px" />
+            <img src="imgs/lg.png" width="100px" />
           </div>
-          <h4> <span className="logo-text">ARTI</span> WEb SCHOOL</h4>
+
+         
 
           <ul className="link">
             <li><a href="" className="active">Home</a></li>
@@ -52,18 +86,9 @@ export default function App() {
             <li><a href="#">Contact</a></li>
           </ul>
 
-          <div className="line"></div>
-
           <div className="min">
-            {/* <button className="btn">Inscription</button> */}
-            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Inscription
-            </a>
-
+            <button className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Inscription</button>
+           
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
@@ -107,50 +132,20 @@ export default function App() {
 
         </div>
 
-        <div className="icons">
-          <div className="parenticon">
-            <div className="childicon">
-              <i className="fa-brands fa-facebook"></i>
-            </div>
-            <div className="childicon">
-              <i className="fa-brands fa-youtube"></i>
-            </div>
-
-            <div className="childicon">
-              <i className="fa-brands fa-square-whatsapp"></i>
-            </div>
-
-            <div className="childicon">
-              <i className="fa-brands fa-square-instagram"></i>
-            </div>
-
-            <div className="contact-icon">
-              <div className="childicon">
-                <i className="fa-solid fa-phone"></i>
-              </div>
-
-              <button data-text="Awesome" className="button">
-                <span className="actual-text">&nbsp;0672907661&nbsp;</span>
-                <span className="hover-text" aria-hidden="true">&nbsp;0672907661&nbsp;</span>
-              </button>
-
-              <div className="childicon">
-                <i className="fa-solid fa-envelope"></i>
-              </div>
-
-              <button data-text="Awesome" className="button">
-                <span className="actual-text">&nbsp;contact@Artiweb.ma&nbsp;</span>
-                <span className="hover-text" aria-hidden="true">&nbsp;contact@Artiweb.ma&nbsp;</span>
-              </button>
-            </div>
-          </div>
-        </div>
+        
       </header>
       {/* end nvNAv */}
       <main>
+        {/* img acuueil */}
+        <div className="img_acc">
+          <img src="imgs/Blue White Moder Playful Back to School Banner.png" className="ima-fluid" alt="" />
+          </div>
+         
+          {/* end image */}
+
         <div className="container lg-container">
-          {/* Youssef Code */}
-          <div className="imgae_slider" id="imgs">
+          {/* slider  */}
+          {/* <div className="imgae_slider" id="imgs">
             <Swiper
               modules={[Pagination, Autoplay]}
               spaceBetween={0}
@@ -172,7 +167,13 @@ export default function App() {
                 <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
               </SwiperSlide>
             </Swiper>
-          </div>
+          </div> */}
+          {/*end slide */}
+
+          
+
+
+
           <div className="d-flex gap-3 mt-4">
             <div className="my-4">
               <h2 align="center">School <br /> <span className="ms-3">Informations</span></h2>
@@ -253,21 +254,21 @@ export default function App() {
         <div className="container d-flex justify-content-center gap-4 my-3">
           <form action="#" method="post" className="w-50 card p-3 h-50" ref={form} onSubmit={sendEmail}>
             <div className="mb-3">
-              <label for="full_name" className="form-label">Name</label>
+              <label for="full_name" className="form-label">Nom Prénom *</label>
               <input type="text" className="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
             </div>
 
             <div className="mb-3">
-              <label for="email" className="form-label">Email</label>
+              <label for="email" className="form-label">Email *</label>
               <input type="email" className="form-control" name="email" id="email" placeholder="email.example@mail.com" />
             </div>
 
             <div className="mb-3">
-              <label for="msg" className="form-label">Your Massage</label>
+              <label for="msg" className="form-label">Message *</label>
               <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
             </div>
 
-            <button className="btn btn-danger w-25 justify-content-end" type="submit">Send</button>
+            <button className="btn btn-danger w-25 justify-content-end" type="submit">Envoyer</button>
           </form>
 
           <div className="map-form">
