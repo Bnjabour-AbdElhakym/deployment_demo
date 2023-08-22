@@ -14,35 +14,35 @@
 
 
 .parent {
-  background-color: #003366;
-  height: 90px;
+  background-color: #ffffff;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-around;
-  /* margin: 0px 20px; */
+
+}
+
+.logo img {
+  margin-bottom: 10px;
+
 }
 
 .link {
   position: relative;
   display: flex;
-  /* background-color: red; */
-  right: 210px;
   top: 5px;
 }
 
 li {
-  margin: 25px;
+  margin: 5px;
 }
 
-.active {
 
-  font-weight: bolder;
-}
 
 a {
   position: relative;
-  color: #ffffff;
+  color: #5087cd;
   font-size: 15px;
   font-weight: bolder;
   text-decoration: none;
@@ -54,7 +54,7 @@ a {
 a::after {
   content: "";
   position: absolute;
-  background-color: #FF9900;
+  background-color: #f46e16;
   height: 3px;
   width: 0;
   left: 0;
@@ -72,10 +72,10 @@ a:hover:after {
 }
 
 .btn {
-  background-color: #FF9900;
+  background-color: #f46e16;
   color: #ffffff;
   border: none;
-  padding: 10px 10px;
+  padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -83,42 +83,38 @@ a:hover:after {
 
 
 .btn:hover {
-  background-color: #fff;
-  color: #FF9900;
+  background-color: #5087cd;
+  color: #ffffff;
+
 }
 
 .line {
   position: absolute;
-  background-color: #FF9900;
+  background-color: #5087cd;
   width: 100%;
-  height: 7px;
-  top: 80px;
+  height: 1px;
+  top: 40px;
 }
 
 .icons {
-  background-color: #003366;
-
-  /* justify-content: center;
-    align-items: center; */
-  /* margin: 0px 20px; */
   height: 39px;
 }
 
 .parenticon {
   display: flex;
-  margin-left: 10px;
+  margin-left: 85px;
+
 
 }
 
 svg {
-  color: #FF9900;
-
+  color: #ffffff;
   margin-left: 7px;
   margin-top: 7px;
 }
 
 .childicon {
-  background-color: #ffffff;
+  background-color: #f46e16;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -131,15 +127,11 @@ svg {
   margin-left: 550px;
 }
 
-h6 {
-  color: #FF9900;
-  font-family: 'Poppins', sans-serif;
-  margin: 10px 10px;
-}
+
 
 
 .contact-icon .childicon {
-  background-color: #ffffff;
+  background-color: #f46e16;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -150,160 +142,42 @@ h6 {
 .parent h4 {
   position: relative;
   font-family: revamped;
-  color: #ffffff;
+  color: #f46e16;
   margin-right: 155px;
-  right: 30px;
-}
-
-.logo-text {
-  font-family: revamped;
-  color: #FF9900;
-  font-size: xx-large;
-}
-
-/* button animation */
-
-.min a {
-  position: absolute;
-  right: 5px;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  overflow: hidden;
-  padding: 10px 10px;
-  font-size: 15px;
-  text-decoration: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: 0 20px 50px rgb(255 255 255 /5%);
-}
-
-.min a:before {
-  position: absolute;
-  width: 50%;
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  content: '';
-  background-color: rgb(142 255 240 /10%);
-}
-
-.min a span:nth-child(1) {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, #362102, #FF9900);
-  animation: animate1 2s linear infinite;
-}
-
-@keyframes animate1 {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.min a span:nth-child(2) {
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: linear-gradient(to bottom, #362102, #FF9900);
-  animation: animate2 2s linear infinite;
-  animation-delay: 1s;
-}
-
-@keyframes animate2 {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(100%);
-  }
-}
-
-.min a span:nth-child(3) {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to left, #362102, #FF9900);
-  animation: animate3 2s linear infinite;
-
-}
-
-@keyframes animate3 {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
+  right: 70px;
 }
 
 
-.min a span:nth-child(4) {
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, #362102, #FF9900);
-  animation: animate4 2s linear infinite;
-  animation-delay: 1s;
 
 
-}
-
-@keyframes animate4 {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-/* contact animate */
 
 /* === removing default button style ===*/
 .button {
-
   height: auto;
   background: transparent;
   padding: 0;
   border: none;
-
 }
 
 .actual-text {
-  color: #ffffff;
+  color: #5087cd;
+
   font-size: 17px;
   margin-left: 4px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+
 }
 
 /* button styling */
 .button {
   --border-right: 6px;
   --text-stroke-color: rgba(255, 255, 255, 0.6);
-  --animation-color: #FF9900;
+  --animation-color: #f46e16;
   --fs-size: 2px;
   letter-spacing: 1px;
   text-decoration: none;
   font-size: var(--fs-size);
   position: relative;
-
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
@@ -319,7 +193,7 @@ h6 {
   width: 0%;
   inset: 0;
   font-family: 'Poppins', sans-serif;
-  border-right: var(--border-right) solid var(--animation-color);
+  /* border-right: var(--border-right) solid var(--animation-color); */
   overflow: hidden;
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
@@ -459,4 +333,9 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.img_acc img {
+  width: 100%;
+  height: auto;
 }
