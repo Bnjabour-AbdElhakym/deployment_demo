@@ -169,10 +169,10 @@ export default function App() {
             </Swiper>
   </div>*/}
 
-          <div className="d-flex  gap-3 aling-items-center">
-            <div className="my-5">
+          <div className="d-md-flex gap-3 aling-items-center">
+            <div className="my-5 text-center">
               <h2 className="sm-text-center" style={{ color: "#5087cd" }}>A Propos de Nous</h2>
-              <p className="mt-4" style={{ lineHeight: "2rem", marginRight: "7rem" }}>
+              <p className="mt-4 md-me-5" style={{ lineHeight: "2rem" }}>
                 l'école primaire FirstSchool est un lieu où l'éducation va au-delà des salles de classe, où les élèves apprennent non seulement des concepts académiques, mais aussi des valeurs humaines essentielles. C'est un endroit où la curiosité est encouragée, où les liens sont tissés et où les rêves prennent leur envol. Chez Lumière d'Apprendre, chaque enfant est guidé vers le chemin de la découverte de soi et du monde qui les entoure, préparant ainsi le terrain pour une vie riche de sens et de réussite.
               </p>
               <button className="learn-more" id="LrBtn">
@@ -183,17 +183,14 @@ export default function App() {
               </button>
             </div>
             <div className="img">
-              <img src="imgs/right-side-image.gif" alt="study gif" srcset="" />
+              <img src="imgs/right-side-image.gif" alt="study gif" className="w-sm-50 sm-mx-auto" />
             </div>
           </div>
         </div>
 
         {/* pleace for the cards */}
-        <div id="offre" className="Cards-Container d-md-flex justify-content-evenly mx-4 my-3">
-          <div className="image-container sm-w-50 align-end">
-            <img src="imgs/small-boy-reading-book.jpg" className="w-25 sm-w-50" style={{ minWidth: "25rem" }} alt="smiling girl studying home" />
-          </div>
-          <div className="card-content mx-4 mt-5">
+        <div id="offre" className="Cards-Container d-md-flex flex-row-reverse justify-content-evenly mx-4 my-3">
+          <div className="card-content mx-4 my-5">
             <h1 className="Card-header-img text-center">First Primary School</h1>
             <p className="mx-5 my-3" style={{ lineHeight: "2.5rem" }}>
               l'école primaire FirstSchool est un lieu où
@@ -212,13 +209,17 @@ export default function App() {
               <span className="button-text">Learn More</span>
             </button>
           </div>
+
+          <div className="image-container sm-w-50 align-end">
+            <img src="imgs/small-boy-reading-book.jpg" className="w-25 sm-w-100" style={{ minWidth: "25rem" }} alt="smiling girl studying home" />
+          </div>
         </div>
         {/* end of cards */}
 
         {/* Contact section */}
-        <h1 align="center" className="mb-2">Contact Section</h1>
-        <div className="container d-flex justify-content-center gap-4 my-3">
-          <form action="#" method="post" className="w-50 card p-3 h-50" ref={form} onSubmit={sendEmail}>
+        <h1 align="center" className="mb-2 mt-4">Contact Section</h1>
+        <div className="container d-md-flex justify-content-center my-3">
+          <form action="#" method="post" className="w-100 card p-3 m-3 h-50 w-sm-100" ref={form} onSubmit={sendEmail}>
             <div className="mb-3">
               <label for="full_name" className="form-label">Nom Prénom *</label>
               <input type="text" className="form-control" name="full_name" id="full_name" placeholder="Your Full Name" />
@@ -234,11 +235,11 @@ export default function App() {
               <textarea className="form-control" name="msg" id="msg" rows="3"></textarea>
             </div>
 
-            <button className="btn btn-danger w-25 justify-content-end" type="submit">Envoyer</button>
+            <button className="btn btn-danger w-50 justify-content-end" type="submit">Envoyer</button>
           </form>
 
-          <div className="map-form">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.2276595979383!2d-5.002454225620211!3d34.038030818482916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b73ec23f32f%3A0x2f5183c1d50c3d09!2sArti%20web%20%3A%20Agence%20de%20Communication%20et%20Marketing%20Digital%20-%20F%C3%A8s!5e0!3m2!1sen!2sma!4v1692565193081!5m2!1sen!2sma" width="600" height="450" style={{ border: "0", borderRadius: "10px" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div className="map-form m-2 w-100">
+            <iframe className="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.2276595979383!2d-5.002454225620211!3d34.038030818482916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b73ec23f32f%3A0x2f5183c1d50c3d09!2sArti%20web%20%3A%20Agence%20de%20Communication%20et%20Marketing%20Digital%20-%20F%C3%A8s!5e0!3m2!1sen!2sma!4v1692565193081!5m2!1sen!2sma" width={"100%"} height="450" style={{ border: "0", borderRadius: "10px" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         {/* end Contact section */}
@@ -247,8 +248,7 @@ export default function App() {
       <footer className="bg-dark text-light p-4 d-lg-flex d-md-flex justify-content-evenly gap-3 align-items-center d-sm-block">
         <div className="text-center lg-25 sm-100 p-3" style={{ minWidth: "33%" }}>
           <div className="logo d-flex">
-            <img src="logo.svg" width="80px" />
-            <h4 className="mt-3"> <span className="logo-text">ARTI</span> WEb SCHOOL</h4>
+            <img src="imgs/lg.png" className="mx-auto w-50" />
           </div>
 
           <div>
