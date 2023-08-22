@@ -55,14 +55,7 @@ export default function App() {
           <div className="line"></div>
 
           <div className="min">
-            {/* <button className="btn">Inscription</button> */}
-            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Inscription
-            </a>
+            <button className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Inscription</button>
 
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
@@ -110,18 +103,15 @@ export default function App() {
         <div className="icons">
           <div className="parenticon">
             <div className="childicon">
-              <i className="fa-brands fa-facebook"></i>
-            </div>
-            <div className="childicon">
-              <i className="fa-brands fa-youtube"></i>
+              <i><img src="facebook.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="childicon">
-              <i className="fa-brands fa-square-whatsapp"></i>
+              <i><img src="whatsapp-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="childicon">
-              <i className="fa-brands fa-square-instagram"></i>
+              <i><img src="instagram-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="contact-icon">
@@ -173,11 +163,11 @@ export default function App() {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className="d-flex gap-3 mt-4">
-            <div className="my-4">
-              <h2 align="center">School <br /> <span className="ms-3">Informations</span></h2>
-              <p className="mt-4" style={{ lineHeight: "2rem" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deserunt esse eos, vero cumque, praesentium ea accusamus corporis doloremque accusantium enim. Beatae ea iure fugiat ex placeat et laboriosam animi possimus magnam voluptates dolorum eos commodi, labore sunt! Cupiditate ex eaque nulla odio dignissimos ad soluta optio illum quae libero!
+          <div className="d-flex  gap-3 aling-items-center">
+            <div className="my-5">
+              <h2 className="sm-text-center" style={{ color: "#5087cd" }}>A Propos de Nous</h2>
+              <p className="mt-4" style={{ lineHeight: "2rem", marginRight: "7rem" }}>
+                l'école primaire FirstSchool est un lieu où l'éducation va au-delà des salles de classe, où les élèves apprennent non seulement des concepts académiques, mais aussi des valeurs humaines essentielles. C'est un endroit où la curiosité est encouragée, où les liens sont tissés et où les rêves prennent leur envol. Chez Lumière d'Apprendre, chaque enfant est guidé vers le chemin de la découverte de soi et du monde qui les entoure, préparant ainsi le terrain pour une vie riche de sens et de réussite.
               </p>
               <button className="learn-more" id="LrBtn">
                 <span className="circle" aria-hidden="true">
@@ -193,57 +183,28 @@ export default function App() {
         </div>
 
         {/* pleace for the cards */}
-        <h2 align="center" className="my-3">The School Offres</h2>
-        <div id="offre" className="Cards-Container d-flex flex-wrap gap-4 mt-3 mb-5 justify-content-center">
-          <div className="card text-center" style={{ width: "20rem" }}>
-            <img src="imgs/smiling-girl-studying-home.jpg" className="card-img-top" alt="smiling girl studying home" />
-            <div className="card-body">
-              <h5 className="card-title">Primary School</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
-              </p>
-
-              <button className="learn-more" id="LrBtn">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
-            </div>
+        <div id="offre" className="Cards-Container d-md-flex justify-content-evenly mx-4 my-3">
+          <div className="image-container sm-w-50 align-end">
+            <img src="imgs/small-boy-reading-book.jpg" className="w-25 sm-w-50" style={{ minWidth: "25rem" }} alt="smiling girl studying home" />
           </div>
+          <div className="card-content mx-4 mt-5">
+            <h1 className="Card-header-img text-center">First Primary School</h1>
+            <p className="mx-5 my-3" style={{ lineHeight: "2.5rem" }}>
+              l'école primaire FirstSchool est un lieu où
+              les rires résonnent, les esprits s'épanouissent
+              et les liens se tissent. C'est un endroit où chaque
+              enfant est encouragé à briller dans sa propre lumière,
+              à explorer le monde qui l'entoure et à préparer
+              le terrain pour un avenir rempli de succès
+              et de réalisations.
+            </p>
 
-          <div className="card text-center" style={{ width: "20rem" }}>
-            <img src="imgs/high-school-girl.jpg" className="card-img-top" alt="high school girl" />
-            <div className="card-body">
-              <h5 className="card-title">High School</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
-              </p>
-
-              <button className="learn-more" id="LrBtn">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="card text-center" style={{ width: "20rem" }}>
-            <img src="imgs/college-student.jpg" className="card-img-top" alt="college student" />
-            <div className="card-body">
-              <h5 className="card-title">College</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
-              </p>
-
-              <button className="learn-more" id="LrBtn">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
-            </div>
+            <button className="learn-more ms-5 card_btn" id="LrBtn">
+              <span className="circle" aria-hidden="true">
+                <span className="icon arrow"></span>
+              </span>
+              <span className="button-text">Learn More</span>
+            </button>
           </div>
         </div>
         {/* end of cards */}
@@ -322,18 +283,15 @@ export default function App() {
           </p>
           <div className="d-flex justify-content-center">
             <div className="childicon">
-              <i className="fa-brands fa-facebook me-2"></i>
-            </div>
-            <div className="childicon">
-              <i className="fa-brands fa-youtube me-2"></i>
+              <i><img src="facebook.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="childicon">
-              <i className="fa-brands fa-square-whatsapp me-2"></i>
+              <i><img src="whatsapp-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="childicon">
-              <i className="fa-brands fa-square-instagram me-2"></i>
+              <i><img src="instagram-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
           </div>
         </div>
