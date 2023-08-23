@@ -7,11 +7,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { delay } from "q";
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
 
 export default function App() {
+  const [countOn, setCountOn] = useState(false);
 
   const form = useRef();
 
@@ -188,6 +191,41 @@ export default function App() {
           </div>
         </div>
 
+        <ScrollTrigger onEnter={() => setCountOn(true)} onExit={() => setCountOn(false)}>
+          <div className="mx-5 py-3 row gap-5 justify-content-center " style={{ backgroundColor: "#fff" }}>
+            <h2 className="text-center mb-0" style={{ color: "#5087cd" }}>School First <br /><span style={{ color: "#f46e16" }}>Chiffres</span></h2>
+            <div className="card p-2 col-auto col-md-2 text-center text-light" style={{ backgroundColor: "#5087cd", boxShadow: "1px 1px 10px #fff" }}>
+              <div className="align-items-center">
+                {/* <img src="imgs/school-solid.svg" className="m-2" width={"45px"} alt="" /><br /> */}
+                <i class="fa-solid fa-user-graduate m-2 fs-2"></i>
+                <h5 className="ms-1">ÉLÈVES</h5>
+              </div>
+              <h3>+{countOn && <CountUp start={0} end={20000} duration={3} delay={0} />}</h3>
+            </div>
+            <div className="card p-2 col-auto col-md-2 text-center text-light" style={{ backgroundColor: "#5087cd", boxShadow: "1px 1px 10px #fff" }}>
+              <div className="align-items-center">
+                <i class="fa-solid fa-school m-2 fs-2"></i>
+                <h5 className="ms-1">CLASSES</h5>
+              </div>
+              <h3>+{countOn && <CountUp start={0} end={200} duration={3} delay={0} />}</h3>
+            </div>
+            <div className="card p-2 col-auto col-md-2 text-center text-light" style={{ backgroundColor: "#5087cd", boxShadow: "1px 1px 10px #fff" }}>
+              <div className="align-items-center">
+                <i class="fa-solid fa-graduation-cap m-2 fs-2"></i>
+                <h5 className="ms-1">BACHELIERS</h5>
+              </div>
+              <h3>+{countOn && <CountUp start={0} end={5800} duration={3} delay={0} />}</h3>
+            </div>
+            <div className="card p-2 col-auto col-md-2 text-center text-light" style={{ backgroundColor: "#5087cd", boxShadow: "1px 1px 10px #fff" }}>
+              <div className="align-items-center">
+                <i class="fa-solid fa-briefcase m-2 fs-2"></i>
+                <h5 className="ms-1">ANNÉES D'EXPERTISE</h5>
+              </div>
+              <h3>+{countOn && <CountUp start={0} end={10} duration={3} delay={0} />}</h3>
+            </div>
+          </div>
+        </ScrollTrigger>
+
         {/* pleace for the cards */}
         <div id="offre" className="Cards-Container d-md-flex flex-row-reverse justify-content-evenly mx-4 my-3">
           <div className="card-content mx-4 my-5">
@@ -285,19 +323,18 @@ export default function App() {
         <div className="text-center lg-25 sm-100 p-3" style={{ minWidth: "33%" }}>
           <h4>Company informations</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quam dolorem? Repudiandae distinctio quod nemo delectus placeat enim molestiae animi.
+            l'école primaire FirstSchool est un lieu où l'éducation va au-delà des salles de classe, où les élèves apprennent non seulement des concepts académiques, mais aussi des valeurs humaines essentielles ...
           </p>
           <div className="d-flex justify-content-center">
             <div className="childicon">
-              <i><img src="facebook.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
+              <img src="imgs/facebook.svg" alt="" width={"20"} style={{ margin: "4px 4px" }} />
+            </div>
+            <div className="childicon">
+              <img src="imgs/instagram.svg" width={"18"} alt="" style={{ margin: "6px 6px" }} />
             </div>
 
             <div className="childicon">
-              <i><img src="whatsapp-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
-            </div>
-
-            <div className="childicon">
-              <i><img src="instagram-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
+              <img src="imgs/whatsapp.svg" width={"18"} alt="" style={{ margin: "6px 6px" }} />
             </div>
           </div>
         </div>
