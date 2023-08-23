@@ -1,29 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,700&family=Poppins:wght@600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 @import url('https://fonts.cdnfonts.com/css/revamped');
+@import url('https://fonts.cdnfonts.com/css/parisienne');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
   list-style: none;
 }
 
-
-
-.parent {
-  background-color: #ffffff;
-  height: 70px;
-  display: flex;
- justify-content: center;
- align-items: center;
- justify-content: space-around;
-
+header{
+  position: relative;
 }
 
-.logo img{
+.parent-nav{
+  background-color: #ffffff;  
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 1s ;
+}
+
+.parent_active{
+  position: fixed;
+  top: 0;
+  
+  background-color: #ffffff;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 99;
+}
+
+
+.logo img {
   margin-bottom: 10px;
 
 }
@@ -85,7 +103,7 @@ a:hover:after {
 .btn:hover {
   background-color: #5087cd;
   color: #ffffff;
-  
+
 }
 
 .line {
@@ -103,8 +121,6 @@ a:hover:after {
 .parenticon {
   display: flex;
   margin-left: 85px;
-
-
 }
 
 svg {
@@ -139,7 +155,7 @@ svg {
   margin-top: 3px;
 }
 
-.parent h4 {
+.parent-nav h4 {
   position: relative;
   font-family: revamped;
   color: #f46e16;
@@ -159,10 +175,12 @@ svg {
   border: none;
 }
 
-.actual-text{
-  color: blue; 
+.actual-text {
+  color: #5087cd;
+
   font-size: 17px;
   margin-left: 4px;
+  font-family: "Poppins", sans-serif;
 
 }
 
@@ -230,7 +248,8 @@ svg {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #282936;
+  /* background: #282936; */
+  background: #f46e16;
   border-radius: 1.625rem;
 }
 
@@ -272,6 +291,7 @@ svg {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
+  /* color: #282936; */
   color: #282936;
   font-weight: 700;
   line-height: 1.6;
@@ -310,7 +330,218 @@ svg {
   font-size: 0.7rem;
 }
 
-.img_acc img{
+.Card-header-img {
+  font-family: "Parisienne";
+  color: #5087cd;
+}
+
+.image-container {
+  min-width: 30rem;
+  height: 28rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
   width: 100%;
   height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img_acc img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* media navbar */
+
+@media(max-width:1135px){
+ 
+.parenticon {
+  display: flex;
+  margin-left: 55px;
+}
+
+.childicon {
+  background-color: #f46e16;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+.contact-icon {
+  display: flex;
+  margin-left: 430px;
+}
+
+
+}
+
+@media(max-width:1047px){
+
+ 
+  
+.parenticon {
+  display: flex;
+  margin-left: 55px;
+}
+
+.childicon {
+  background-color: #f46e16;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+.contact-icon {
+  display: flex;
+  margin-left: 370px;
+}
+
+
+}
+
+@media(max-width:1047px){
+
+ 
+  
+  
+  .childicon {
+    background-color: #f46e16;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+  
+  .contact-icon {
+    display: flex;
+    margin-left: 320px;
+  }
+  
+  
+  }
+
+  @media(max-width:930px){
+    
+    .childicon {
+      background-color: #f46e16;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-left: 2px;
+      margin-top: 3px;
+    }
+    
+    .contact-icon {
+      display: flex;
+      margin-left: 280px;
+    }
+    
+    
+    
+    }
+
+    @media(max-width:877px){
+    
+      .parenticon {
+        display: flex;
+        margin-left: 25px;
+      }
+
+      .childicon {
+        background-color: #f46e16;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      
+        margin-top: 3px;
+      }
+      
+      .contact-icon {
+        display: flex;
+        margin-left: 200px;
+      }
+      
+      
+      
+      }
+    
+  
+/* end media */
+
+.slide-h4{
+  color: #5087cd;
+  text-align: center;
+}
+
+.parent-div-inscri{
+  position: relative;
+ 
+  
+}
+.div-inscri{
+  position: fixed;
+  background-color: #f46e16;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+ right: 30px;
+ top: 550px;
+ z-index: 99;
+}
+
+.div-inscri-h6{
+  position: fixed;
+  background-color: #f46e16;
+  border-radius: 20px;
+  padding: 2px 0px;
+  width: 120px;
+  height: 25px;
+ right: 73px;
+ top: 558px;
+ z-index: 99;
+ text-align: center;
+ color: #ffffff;
+ cursor: pointer;
+}
+
+.div-inscri svg{
+  font-size: 20px;
+margin: 9px 8px;
+cursor: pointer;
+} 
+
+
+.parent-scrole-div{
+  position: relative;
+}
+
+.div-scrol{
+  position: fixed;
+  background-color: #f46e16;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+ top: 540px;
+ z-index: 99;
+ left: 25px;
+}
+
+.div-scrol  svg {
+  font-size: 25px;
+  color: #ffffff;
+  text-align: center;
+  
+  margin: 10px 6px;
+cursor: pointer;
 }

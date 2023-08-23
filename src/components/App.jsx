@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import '../style.css';
@@ -12,9 +13,29 @@ import emailjs from '@emailjs/browser';
 
 
 export default function App() {
-
+  const [isSticky, setIsSticky] = useState(false);
   const form = useRef();
 
+
+    
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  
+  
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -31,17 +52,17 @@ export default function App() {
 
       <header>
 
-      <div className="icons">
+        <div className="icons">
           <div className="parenticon">
             <div className="childicon">
-             <img src="imgs/facebook.svg" alt="" width={"20"} style={{ margin:"4px 4px" }} />
+              <img src="imgs/facebook.svg" alt="" width={"20"} style={{ margin: "4px 4px" }} />
             </div>
             <div className="childicon">
-              <img src="imgs/instagram.svg" width={"18"} alt="" style={{ margin:"6px 6px" }}  />
+              <img src="imgs/instagram.svg" width={"18"} alt="" style={{ margin: "6px 6px" }} />
             </div>
 
             <div className="childicon">
-              <img src="imgs/whatsapp.svg" width={"18"} alt="" style={{ margin:"6px 6px" }} />
+              <img src="imgs/whatsapp.svg" width={"18"} alt="" style={{ margin: "6px 6px" }} />
             </div>
 
             <div className="contact-icon">
@@ -70,13 +91,13 @@ export default function App() {
         <div className="line"></div>
 
         {/* nv nAV */}
-        <div className="parent">
+        <div className={isSticky?"parent_active":"parent-nav"}> 
 
           <div className="logo">
             <img src="imgs/lg.png" width="100px" />
           </div>
 
-         
+
 
           <ul className="link">
             <li><a href="" className="active">Home</a></li>
@@ -88,7 +109,7 @@ export default function App() {
 
           <div className="min">
             <button className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Inscription</button>
-           
+
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
@@ -132,53 +153,51 @@ export default function App() {
 
         </div>
 
-        
+
       </header>
       {/* end nvNAv */}
       <main>
         {/* img acuueil */}
         <div className="img_acc">
           <img src="imgs/Blue White Moder Playful Back to School Banner.png" className="ima-fluid" alt="" />
-          </div>
-         
-          {/* end image */}
+        </div>
+
+        {/* end image */}
+
+                {/* div link inscription */}
+
+<div className="parent-div-inscri" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+  <div className="div-inscri-h6">
+    <h6>inscription</h6>
+  </div>
+
+<div className="div-inscri">
+<i className="fa-solid fa-right-to-bracket" style={{color:"#ffffff"}}></i>
+</div> 
+
+</div>
+        {/* end div link inscription */}
+
+        {/* div link pour scrole in page*/}
+        <div className="parent-scrole-div">
+        <div className="div-scrol">
+<a href="#scrole">
+<i className="fa-solid fa-arrow-down-long"></i>
+</a>
+        
+
+        </div>
+        </div>
+
+        {/* end link pour scrole in page */}
 
         <div className="container lg-container">
-          {/* slider  */}
-          {/* <div className="imgae_slider" id="imgs">
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={0}
-              slidesPerView={1}
-              autoplay={{ delay: 2000 }}
-              pagination={{ clickable: true }}
-              style={{ width: "auto", height: "600px", margin: "10px 10px" }}
-            >
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo1.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo2.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo3.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-            </Swiper>
-          </div> */}
-          {/*end slide */}
-
-          
-
-
-
-          <div className="d-flex gap-3 mt-4">
-            <div className="my-4">
-              <h2 align="center">School <br /> <span className="ms-3">Informations</span></h2>
-              <p className="mt-4" style={{ lineHeight: "2rem" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deserunt esse eos, vero cumque, praesentium ea accusamus corporis doloremque accusantium enim. Beatae ea iure fugiat ex placeat et laboriosam animi possimus magnam voluptates dolorum eos commodi, labore sunt! Cupiditate ex eaque nulla odio dignissimos ad soluta optio illum quae libero!
+          <div className="d-flex  gap-3 aling-items-center">
+            <div className="my-5">
+              <h2 className="sm-text-center" style={{ color: "#5087cd" }}>A Propos de Nous</h2>
+              <p className="mt-4" style={{ lineHeight: "2rem", marginRight: "7px" }}>
+                l'école primaire FirstSchool est un lieu où l'éducation va au-delà des salles de classe, où les élèves apprennent non seulement des concepts académiques, mais aussi des valeurs humaines essentielles. C'est un endroit où la curiosité est encouragée, où les liens sont tissés et où les rêves prennent leur envol. Chez Lumière d'Apprendre, chaque enfant est guidé vers le chemin de la découverte de soi et du monde qui les entoure, préparant ainsi le terrain pour une vie riche de sens et de réussite.
               </p>
               <button className="learn-more" id="LrBtn">
                 <span className="circle" aria-hidden="true">
@@ -193,64 +212,88 @@ export default function App() {
           </div>
         </div>
 
+        {/* video */}
+
+<div className="vid">
+  <video src="https://web.facebook.com/FirstSchoolFes/videos/840862024286675">
+  </video>
+</div>
+
+        {/* end video */}
+
+ 
+
+
         {/* pleace for the cards */}
-        <h2 align="center" className="my-3">The School Offres</h2>
-        <div id="offre" className="Cards-Container d-flex flex-wrap gap-4 mt-3 mb-5 justify-content-center">
-          <div className="card text-center" style={{ width: "20rem" }}>
-            <img src="imgs/smiling-girl-studying-home.jpg" className="card-img-top" alt="smiling girl studying home" />
-            <div className="card-body">
-              <h5 className="card-title">Primary School</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
-              </p>
-
-              <button className="learn-more" id="LrBtn">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
-            </div>
+        <div id="offre" className="Cards-Container d-md-flex justify-content-evenly mx-4 my-3">
+          <div className="image-container sm-w-50 align-end">
+            <img src="imgs/small-boy-reading-book.jpg" className="w-25 sm-w-50" style={{ minWidth: "25rem" }} alt="smiling girl studying home" />
           </div>
+          <div className="card-content mx-4 mt-5">
+            <h1 className="Card-header-img text-center">First Primary School</h1>
+            <p className="mx-5 my-3" style={{ lineHeight: "2.5rem" }}>
+              l'école primaire FirstSchool est un lieu où
+              les rires résonnent, les esprits s'épanouissent
+              et les liens se tissent. C'est un endroit où chaque
+              enfant est encouragé à briller dans sa propre lumière,
+              à explorer le monde qui l'entoure et à préparer
+              le terrain pour un avenir rempli de succès
+              et de réalisations.
+            </p>
 
-          <div className="card text-center" style={{ width: "20rem" }}>
-            <img src="imgs/high-school-girl.jpg" className="card-img-top" alt="high school girl" />
-            <div className="card-body">
-              <h5 className="card-title">High School</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
-              </p>
-
-              <button className="learn-more" id="LrBtn">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="card text-center" style={{ width: "20rem" }}>
-            <img src="imgs/college-student.jpg" className="card-img-top" alt="college student" />
-            <div className="card-body">
-              <h5 className="card-title">College</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum neque cumque nulla praesentium esse?
-              </p>
-
-              <button className="learn-more" id="LrBtn">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
-            </div>
+            <button className="learn-more ms-5 card_btn" id="LrBtn">
+              <span className="circle" aria-hidden="true">
+                <span className="icon arrow"></span>
+              </span>
+              <span className="button-text" id="scrole">Learn More</span>
+            </button>
           </div>
         </div>
         {/* end of cards */}
 
+
+        {/* slider  */}
+          <div className="imgae_slider" id="imgs">
+            <h2 className="slide-h4" >Slide Section</h2>
+            <Swiper 
+              modules={[Pagination, Autoplay]}
+              spaceBetween={6}
+              slidesPerView={3}
+              autoplay={{ delay: 2000 }}
+              pagination={{ clickable: true }}
+              style={{ width: "auto", height: "250px", margin: "10px 64px" }}
+            >
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo1.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo2.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo3.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo1.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo2.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo3.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "100%", height: "auto" }}>
+                <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+              </SwiperSlide>
+            </Swiper>
+  </div>
+  {/* end of slider */}
+
         {/* Contact section */}
-        <h1 align="center" className="mb-2">Contact Section</h1>
+        <h1 align="center" className="mb-2" >Contact Section</h1>
         <div className="container d-flex justify-content-center gap-4 my-3">
           <form action="#" method="post" className="w-50 card p-3 h-50" ref={form} onSubmit={sendEmail}>
             <div className="mb-3">
@@ -323,18 +366,15 @@ export default function App() {
           </p>
           <div className="d-flex justify-content-center">
             <div className="childicon">
-              <i className="fa-brands fa-facebook me-2"></i>
-            </div>
-            <div className="childicon">
-              <i className="fa-brands fa-youtube me-2"></i>
+              <i><img src="facebook.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="childicon">
-              <i className="fa-brands fa-square-whatsapp me-2"></i>
+              <i><img src="whatsapp-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
 
             <div className="childicon">
-              <i className="fa-brands fa-square-instagram me-2"></i>
+              <i><img src="instagram-circle.svg" width={"25px"} style={{ margin: "3px 2.8px" }} alt="instagram" /></i>
             </div>
           </div>
         </div>
