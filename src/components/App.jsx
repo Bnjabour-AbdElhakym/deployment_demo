@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import '../style.css';
@@ -12,8 +13,28 @@ import emailjs from '@emailjs/browser';
 
 
 export default function App() {
-
+  const [isSticky, setIsSticky] = useState(false);
   const form = useRef();
+
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -70,7 +91,7 @@ export default function App() {
         <div className="line"></div>
 
         {/* nv nAV */}
-        <div className="parent">
+        <div className={isSticky ? "parent_active" : "parent-nav"}>
 
           <div className="logo">
             <img src="imgs/lg.png" width="100px" />
@@ -143,36 +164,39 @@ export default function App() {
 
         {/* end image */}
 
-        <div className="container lg-container">
-          {/* slider  */}
-          {/* <div className="imgae_slider" id="imgs">
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={0}
-              slidesPerView={1}
-              autoplay={{ delay: 2000 }}
-              pagination={{ clickable: true }}
-              style={{ width: "auto", height: "600px", margin: "10px 10px" }}
-            >
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo1.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo2.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo3.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-              <SwiperSlide style={{ width: "100%", height: "auto" }}>
-                <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
-              </SwiperSlide>
-            </Swiper>
-  </div>*/}
+        {/* div link inscription */}
 
-          <div className="d-md-flex gap-3 aling-items-center">
-            <div className="my-5 text-center">
+        <div className="parent-div-inscri" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+          <div className="div-inscri-h6">
+            <h6>inscription</h6>
+          </div>
+
+          <div className="div-inscri">
+            <i className="fa-solid fa-right-to-bracket" style={{ color: "#ffffff" }}></i>
+          </div>
+
+        </div>
+        {/* end div link inscription */}
+
+        {/* div link pour scrole in page*/}
+        <div className="parent-scrole-div">
+          <div className="div-scrol">
+            <a href="#scrole">
+              <i className="fa-solid fa-arrow-down-long"></i>
+            </a>
+
+
+          </div>
+        </div>
+
+        {/* end link pour scrole in page */}
+
+        <div className="container lg-container">
+          <div className="d-flex  gap-3 aling-items-center">
+            <div className="my-5">
               <h2 className="sm-text-center" style={{ color: "#5087cd" }}>A Propos de Nous</h2>
-              <p className="mt-4 md-me-5" style={{ lineHeight: "2rem" }}>
+              <p className="mt-4" style={{ lineHeight: "2rem", marginRight: "7px" }}>
                 l'école primaire FirstSchool est un lieu où l'éducation va au-delà des salles de classe, où les élèves apprennent non seulement des concepts académiques, mais aussi des valeurs humaines essentielles. C'est un endroit où la curiosité est encouragée, où les liens sont tissés et où les rêves prennent leur envol. Chez Lumière d'Apprendre, chaque enfant est guidé vers le chemin de la découverte de soi et du monde qui les entoure, préparant ainsi le terrain pour une vie riche de sens et de réussite.
               </p>
               <button className="learn-more" id="LrBtn">
@@ -187,6 +211,18 @@ export default function App() {
             </div>
           </div>
         </div>
+
+        {/* video */}
+
+        <div className="vid">
+          <video src="https://web.facebook.com/FirstSchoolFes/videos/840862024286675">
+          </video>
+        </div>
+
+        {/* end video */}
+
+
+
 
         {/* pleace for the cards */}
         <div id="offre" className="Cards-Container d-md-flex flex-row-reverse justify-content-evenly mx-4 my-3">
@@ -206,7 +242,7 @@ export default function App() {
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>
               </span>
-              <span className="button-text">Learn More</span>
+              <span className="button-text" id="scrole">Learn More</span>
             </button>
           </div>
 
@@ -215,6 +251,47 @@ export default function App() {
           </div>
         </div>
         {/* end of cards */}
+
+
+        {/* slider  */}
+        <div className="imgae_slider" id="imgs">
+          <h2 className="slide-h4" >Slide Section</h2>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={6}
+            slidesPerView={3}
+            autoplay={{ delay: 2000 }}
+            pagination={{ clickable: true }}
+            style={{ width: "auto", height: "250px", margin: "10px 64px" }}
+          >
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo1.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo2.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo3.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo1.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo2.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo3.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+            <SwiperSlide style={{ width: "100%", height: "auto" }}>
+              <img src="photo4.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        {/* end of slider */}
 
         {/* Contact section */}
         <h1 align="center" className="mb-2 mt-4">Contact Section</h1>
